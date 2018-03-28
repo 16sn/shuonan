@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>输出三角形</title>
+</head>
+<body>
+    <script>
+        var num = prompt("输入一个数字",0);
+        if(isNaN(num))
+        {
+            alert("你输入的不是数字")
+        }
+        //大于5的输出
+        else if(num>5)
+        {
+            for(var i=1;i<=num;i++)
+            {
+                for(var r=1;r<=i;r++)
+                {
+                    document.write("&nbsp;");
+                }
+                for(var j=num;j>=i;j--)
+                {
+                    document.write("*&nbsp;");
+                }
+                document.write("</br>");
+            }
+        }
+        //小于5的输出
+        else if(num<=5)
+        {
+            //输出形状的上半部分
+            for(var i=1;i<=num;i++)
+            {
+                for(var r=1;r<=i;r++)
+                {
+                    document.write("&nbsp;");
+                }
+                for(var j=num;j>=i;j--)
+                {
+                    document.write("*&nbsp;");
+                }
+                document.write("</br>");
+            }
+
+            //输出形状的下半部分
+            for(var a=1;a<=num;a++)
+            {
+                for(var c=num;c>=a;c--)
+                {
+                    document.write("&nbsp;");
+                }
+                for(var b=1;b<=a;b++)
+                {
+                    document.write("*&nbsp;");
+                }
+                document.write("</br>");
+            }
+        }
+    </script>
+</body>
+</html>
